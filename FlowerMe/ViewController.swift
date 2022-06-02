@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     let imagePicker = UIImagePickerController()
@@ -64,9 +65,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 let flowerJSON: JSON = JSON(response.result.value)
                 
-                let pageid = flowerJSON["query"]["pageids"][0].string
+                let pageid = flowerJSON["query"]["pageids"][0].stringValue
                 
-                let flowerDescription = flowerJSON["query"]["pages"][pageid]["extract"].string
+                let flowerDescription = flowerJSON["query"]["pages"][pageid]["extract"].stringValue
+                
+                self.label.text = flowerDescription
             }
         }
     }
