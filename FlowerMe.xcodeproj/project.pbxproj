@@ -13,9 +13,13 @@
 		5C733A4E28467531004C1DC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C733A4C28467531004C1DC3 /* Main.storyboard */; };
 		5C733A5028467533004C1DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C733A4F28467533004C1DC3 /* Assets.xcassets */; };
 		5C733A5328467533004C1DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C733A5128467533004C1DC3 /* LaunchScreen.storyboard */; };
+		5C733A5B28467585004C1DC3 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5C733A5A28467585004C1DC3 /* FlowerClassifier.mlmodel */; };
+		A484EF844231CA618067CFB5 /* Pods_FlowerMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068498FAD6C38E075FFF19DE /* Pods_FlowerMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		068498FAD6C38E075FFF19DE /* Pods_FlowerMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA0D82CEE6B315B256ACC99 /* Pods-FlowerMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerMe.debug.xcconfig"; path = "Target Support Files/Pods-FlowerMe/Pods-FlowerMe.debug.xcconfig"; sourceTree = "<group>"; };
 		5C733A4328467531004C1DC3 /* FlowerMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C733A4628467531004C1DC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C733A4828467531004C1DC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		5C733A4F28467533004C1DC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C733A5228467533004C1DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C733A5428467533004C1DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C733A5A28467585004C1DC3 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
+		C220F227BDE8911514D22FBB /* Pods-FlowerMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerMe.release.xcconfig"; path = "Target Support Files/Pods-FlowerMe/Pods-FlowerMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A484EF844231CA618067CFB5 /* Pods_FlowerMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27827B7D6CF1E013AEB8FBB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AA0D82CEE6B315B256ACC99 /* Pods-FlowerMe.debug.xcconfig */,
+				C220F227BDE8911514D22FBB /* Pods-FlowerMe.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5C733A3A28467531004C1DC3 = {
 			isa = PBXGroup;
 			children = (
 				5C733A4528467531004C1DC3 /* FlowerMe */,
 				5C733A4428467531004C1DC3 /* Products */,
+				27827B7D6CF1E013AEB8FBB7 /* Pods */,
+				68202A46E1A5DCC16DB73E67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +82,17 @@
 				5C733A4F28467533004C1DC3 /* Assets.xcassets */,
 				5C733A5128467533004C1DC3 /* LaunchScreen.storyboard */,
 				5C733A5428467533004C1DC3 /* Info.plist */,
+				5C733A5A28467585004C1DC3 /* FlowerClassifier.mlmodel */,
 			);
 			path = FlowerMe;
+			sourceTree = "<group>";
+		};
+		68202A46E1A5DCC16DB73E67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				068498FAD6C38E075FFF19DE /* Pods_FlowerMe.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C733A5728467533004C1DC3 /* Build configuration list for PBXNativeTarget "FlowerMe" */;
 			buildPhases = (
+				802AD6C97BE5D1CE01A8234C /* [CP] Check Pods Manifest.lock */,
 				5C733A3F28467531004C1DC3 /* Sources */,
 				5C733A4028467531004C1DC3 /* Frameworks */,
 				5C733A4128467531004C1DC3 /* Resources */,
+				6CAA2B866CB42911ADCE0BAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +163,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CAA2B866CB42911ADCE0BAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerMe/Pods-FlowerMe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerMe/Pods-FlowerMe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowerMe/Pods-FlowerMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		802AD6C97BE5D1CE01A8234C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowerMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5C733A3F28467531004C1DC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C733A5B28467585004C1DC3 /* FlowerClassifier.mlmodel in Sources */,
 				5C733A4B28467531004C1DC3 /* ViewController.swift in Sources */,
 				5C733A4728467531004C1DC3 /* AppDelegate.swift in Sources */,
 				5C733A4928467531004C1DC3 /* SceneDelegate.swift in Sources */,
@@ -284,9 +357,11 @@
 		};
 		5C733A5828467533004C1DC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA0D82CEE6B315B256ACC99 /* Pods-FlowerMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58A782BHK6;
@@ -304,6 +379,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabrain.FlowerMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,9 +388,11 @@
 		};
 		5C733A5928467533004C1DC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C220F227BDE8911514D22FBB /* Pods-FlowerMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 58A782BHK6;
@@ -332,6 +410,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sabrain.FlowerMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
